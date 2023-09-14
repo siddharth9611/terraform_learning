@@ -130,6 +130,14 @@ resource "aws_security_group" "tf_sg" {
     }
 }*/
 
+##### key pair creation using terraform code #########
+##### we used ssh-keygen command to create keypar in local and add public key to variable or in key name ######
+
+/*resource "aws_key_pair" "tf_key_learn" {
+    key_name = "tf_key_learn"
+    public_key = var.tf_pub_key
+}*/
+
 resource "aws_instance" "tf_ec2" {
     ami = "ami-05552d2dcf89c9b24"
     instance_type = var.instance_type
@@ -137,7 +145,7 @@ resource "aws_instance" "tf_ec2" {
     availability_zone = var.avail_zone
     security_groups = [aws_security_group.tf_sg.id]
     associate_public_ip_address = true  
-    key_name = "tf_key_learn"
+    key_name = "tf_key_pair"
     tags = {
         Name = "${var.env_prefix}_tf_ec2"
     } 
