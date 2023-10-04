@@ -7,6 +7,16 @@
     }
 }*/
 
+#### terraform cloud as remote for tf state file #####
+terraform {
+    backend "remote" {
+        organization = "terraform-cloud-2054"
+        workspaces {
+            name = "terraform_learning"
+        }
+    }
+}
+
 provider "aws" {
     region = "ap-south-1"
 }
