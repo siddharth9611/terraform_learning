@@ -1,0 +1,8 @@
+tf_vpc_cidr_block = "10.0.0.0/16"
+tf_subnet_cidr_block = "10.0.10.0/24"
+avail_zone = "ap-south-1b"
+env_prefix = "learn"
+my_ip = "0.0.0.0/0"
+instance_type = "t2.micro"
+ami_id = "ami-05552d2dcf89c9b24"
+#tf_pub_key = "paste pub key here from ssh-keygen"
