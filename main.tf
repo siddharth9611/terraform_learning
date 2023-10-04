@@ -1,3 +1,12 @@
+##### terraform state backend configuration for s3 bucket ######
+/*terraform {
+    backend "s3" {
+        bucket = "terraformstate2054"
+        key = "tfstate/state.tfstate"
+        region = "ap-south-1"
+    }
+}*/
+
 provider "aws" {
     region = "ap-south-1"
 }
@@ -28,5 +37,6 @@ module "myapp_server" {
     instance_type = var.instance_type
     subnet_id = module.myapp_subnet.subnet.id
 }
+
 
 
