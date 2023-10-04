@@ -9,6 +9,11 @@
 
 #### terraform cloud as remote for tf state file #####
 terraform {
+    required_providers {
+        aws = {
+        source = "hashicorp/aws"
+    }
+  }
     backend "remote" {
         organization = "terraform-cloud-2054"
         workspaces {
