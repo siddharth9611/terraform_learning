@@ -5,3 +5,4 @@ variable env_prefix{}
 variable "my_ip" {}
 variable "instance_type" {}
 variable "ami_id" {}
+variable "env_new_prefix" {}
