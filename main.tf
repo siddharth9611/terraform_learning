@@ -55,7 +55,7 @@ module "myapp_server" {
 
 module "myapp_new_server" {
     source = "./modules/server"
-    vpc_id = aws_vpc.tf_vpc
+    vpc_id = aws_vpc.tf_vpc.id
     my_ip = var.my_ip
     env_prefix = var.env_new_prefix
     ami_id = var.ami_id
