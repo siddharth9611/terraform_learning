@@ -13,7 +13,7 @@ output "tf_ec2_instance_id" {
     value = module.myapp_server.instance.id
 }
 
-##### myapp_new_server ######
+##### myapp_new_server ##
 output "new_tf_ec2_private_ip" {
     description = "new server private ip"
     value = module.myapp_new_server.instance.private_ip
