@@ -53,5 +53,16 @@ module "myapp_server" {
     subnet_id = module.myapp_subnet.subnet.id
 }
 
+module "myapp_new_server" {
+    source = "./modules/server"
+    vpc_id = aws_vpc.tf_vpc
+    my_ip = var.my_ip
+    env_prefix = var.env_new_prefix
+    ami_id = var.ami_id
+    avail_zone = var.avail_zone
+    instance_type = var.instance_type
+    subnet_id = module.myapp_subnet.subnet.id
+}
+
 
 
