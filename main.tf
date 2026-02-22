@@ -62,6 +62,7 @@ module "test_server" {
     avail_zone = var.avail_zone
     instance_type = var.instance_type
     subnet_id = module.myapp_subnet.subnet.id
+
 }
 
 
